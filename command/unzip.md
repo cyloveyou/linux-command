@@ -40,6 +40,7 @@ unzip(选项)(参数)
 -d<目录>：指定文件解压缩后所要存储的目录；
 -x<文件>：指定不要处理.zip压缩文件中的哪些文件；
 -Z：unzip-Z等于执行zipinfo指令。
+-O: 指定 DOS、Windows 和 OS/2 存档的字符编码,适合接收Windows压缩包乱码
 ```
 
 ### 参数
@@ -77,5 +78,8 @@ unzip -o test.zip -d tmp/
 unzip test.zip "*.jpg"
 ```
 
-
+中文文件夹名乱码时解决办法
+```shell
+unzip -O gbk test.zip
+```
 
